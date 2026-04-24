@@ -1,6 +1,6 @@
-# LiveFilm 官网
+# LiveFilms 官网
 
-LiveFilm（能拍胶片效果的 Live Photo）的官方介绍网站与隐私政策页面。
+LiveFilms（能拍胶片效果的 Live Photo）的官方介绍网站与隐私政策页面。
 
 ## 设计理念
 

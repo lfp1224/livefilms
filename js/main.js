@@ -1,5 +1,5 @@
 /* ========================================
-   LiveFilm — 交互脚本
+   LiveFilms — 交互脚本
    ======================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -27,5 +27,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    console.log('%c LiveFilm ', 'background:#0a0a0a;color:#f5f5f5;font-size:14px;padding:6px 12px;');
+    console.log('%c LiveFilms ', 'background:#0a0a0a;color:#f5f5f5;font-size:14px;padding:6px 12px;');
 });
