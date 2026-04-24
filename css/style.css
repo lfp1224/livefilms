@@ -167,24 +167,6 @@ body {
     font-weight: 600;
 }
 
-.hero-eula {
-    margin-top: 24px;
-    font-size: 11px;
-    color: var(--color-text-muted);
-    opacity: 0;
-    animation: fadeIn 1s ease forwards 1s;
-}
-
-.hero-eula a {
-    color: var(--color-text-muted);
-    text-decoration: underline;
-    text-underline-offset: 2px;
-}
-
-.hero-eula a:hover {
-    color: var(--color-text-secondary);
-}
-
 .scroll-indicator {
     position: absolute;
     bottom: 40px;
@@ -217,26 +199,6 @@ body {
     font-size: 13px;
     color: var(--color-text-secondary);
     margin-bottom: 6px;
-}
-
-.footer-links {
-    margin-bottom: 12px;
-}
-
-.footer-links a {
-    font-family: var(--font-mono);
-    font-size: 12px;
-    color: var(--color-green);
-    text-decoration: none;
-    padding: 6px 14px;
-    background: var(--color-green-dim);
-    border: 1px solid rgba(52, 199, 89, 0.3);
-    border-radius: 6px;
-    transition: all 0.2s ease;
-}
-
-.footer-links a:hover {
-    background: rgba(52, 199, 89, 0.25);
 }
 
 .footer-copyright {
