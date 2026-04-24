@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiveFilm — Live Photos with Film Aesthetics</title>
+    <meta name="description" content="LiveFilm — Film filters + motion, preserved together. Bring the soul of film to your Live Photos.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 全局胶片颗粒 -->
+    <div class="grain-overlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1 class="hero-app-name" data-i18n="app-name">LiveFilm</h1>
+            <p class="hero-tagline" data-i18n="hero-tagline">把胶片的味道，装进 Live Photo。</p>
+
+            <ul class="hero-features">
+                <li data-i18n="feat-1">• 精选胶片滤镜 — 内置多款经典胶片模拟，支持导入自定义 LUT</li>
+                <li data-i18n="feat-2">• 专业取景器 — 实时预览、点击对焦、滑动曝光，交互丝般顺滑</li>
+                <li data-i18n="feat-3">• 经典焦段 — 24/28/35/50mm 一键切换</li>
+                <li data-i18n="feat-4">• 画质可选 — 12MP/24MP/48MP 三档输出</li>
+                <li data-i18n="feat-5">• 本地处理 — 无需注册，照片完全属于你自己</li>
+            </ul>
+
+            <a href="#" target="_blank" rel="noopener noreferrer" class="hero-download-btn" data-download>
+                <svg class="app-store-icon" viewBox="0 0 384 512" fill="currentColor">
+                    <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 52.3-11.4 69.5-34.3z"/>
+                </svg>
+                <div class="btn-text">
+                    <span class="btn-text-small">Download on the</span>
+                    <span class="btn-text-large">App Store</span>
+                </div>
+            </a>
+
+            <p class="hero-eula">
+                <span data-i18n="eula-text">Terms of Use (EULA):</span>
+                <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener noreferrer">Apple Standard EULA</a>
+            </p>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="privacy.html" data-i18n="footer-privacy">Privacy Policy</a>
+                </div>
+                <p class="footer-text">LiveFilm — <span data-i18n="footer-desc">Live Photos with Film Aesthetics</span></p>
+                <p class="footer-copyright">&copy; 2026. Crafted with precision by <a href="https://xhslink.com/m/6R2pUaW3pdJ" target="_blank" rel="noopener noreferrer">Leaf.LFP</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        const i18n = {
+            'zh-CN': {
+                'app-name': 'LiveFilm',
+                'hero-tagline': '把胶片的味道，装进 Live Photo。',
+                'feat-1': '• 精选胶片滤镜 — 内置多款经典胶片模拟，支持导入自定义 LUT',
+                'feat-2': '• 专业取景器 — 实时预览、点击对焦、滑动曝光，交互丝般顺滑',
+                'feat-3': '• 经典焦段 — 24/28/35/50mm 一键切换',
+                'feat-4': '• 画质可选 — 12MP/24MP/48MP 三档输出',
+                'feat-5': '• 本地处理 — 无需注册，照片完全属于你自己',
+                'eula-text': '使用条款 (EULA)：',
+                'footer-privacy': '隐私政策',
+                'footer-desc': '能拍胶片效果的 Live Photo'
+            },
+            'en': {
+                'app-name': 'LiveFilm',
+                'hero-tagline': 'Bring the soul of film to your Live Photos.',
+                'feat-1': '• Curated Film Filters — Classic film emulations built-in, custom LUT import supported',
+                'feat-2': '• Professional Viewfinder — Real-time preview, tap to focus, slide to expose, silky smooth',
+                'feat-3': '• Classic Focal Lengths — 24/28/35/50mm at your fingertips',
+                'feat-4': '• Flexible Quality — 12MP/24MP/48MP to match your needs',
+                'feat-5': '• Local Processing — No sign-up required, your photos stay yours',
+                'eula-text': 'Terms of Use (EULA):',
+                'footer-privacy': 'Privacy Policy',
+                'footer-desc': 'Live Photos with Film Aesthetics'
+            }
+        };
+
+        function applyLanguage() {
+            const userLang = navigator.language || navigator.userLanguage;
+            const lang = userLang.startsWith('zh') ? 'zh-CN' : 'en';
+            document.documentElement.lang = lang === 'zh-CN' ? 'zh' : 'en';
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (i18n[lang][key]) {
+                    el.innerHTML = i18n[lang][key];
+                }
+            });
+        }
+
+        applyLanguage();
+    </script>
+</body>
+</html>
