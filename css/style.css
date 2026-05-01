@@ -76,37 +76,40 @@ body {
    Hero
    ======================================== */
 .hero {
-    min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    padding: 40px 28px 24px;
+    padding: 32px 24px 16px;
     position: relative;
+    box-sizing: border-box;
 }
 
 .hero-content {
     text-align: center;
     max-width: 520px;
-    margin-top: auto;
-    margin-bottom: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .hero-app-icon {
-    width: 72px;
-    height: 72px;
-    border-radius: 16px;
+    width: 64px;
+    height: 64px;
+    border-radius: 14px;
     border: 1px solid var(--color-surface-border);
-    margin-bottom: 16px;
+    margin: 0 auto 12px;
     opacity: 0;
     animation: fadeUp 1s ease forwards 0.2s;
 }
 
 .hero-tagline {
-    font-size: clamp(14px, 3vw, 18px);
+    font-size: clamp(13px, 2.5vw, 16px);
     font-weight: 400;
     color: var(--color-text-secondary);
-    margin-bottom: 32px;
+    margin-bottom: 20px;
     opacity: 0;
     animation: fadeUp 1s ease forwards 0.4s;
 }
@@ -114,33 +117,34 @@ body {
 .hero-features {
     list-style: none;
     text-align: left;
-    margin-bottom: 32px;
+    margin-bottom: 20px;
     opacity: 0;
     animation: fadeUp 1s ease forwards 0.6s;
 }
 
 .hero-features li {
-    font-size: 13px;
+    font-size: 12px;
     color: var(--color-text-secondary);
-    line-height: 1.8;
+    line-height: 1.6;
     padding-left: 8px;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
 }
 
 .hero-download-btn {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    padding: 12px 24px;
+    gap: 8px;
+    padding: 10px 20px;
     background: #f5f5f5;
     color: #000;
     border: none;
-    border-radius: 10px;
+    border-radius: 8px;
     cursor: pointer;
     transition: all 0.2s ease;
     text-decoration: none;
     opacity: 0;
     animation: fadeUp 1s ease forwards 0.8s;
+    margin: 0 auto;
 }
 
 .hero-download-btn:hover {
@@ -149,8 +153,8 @@ body {
 }
 
 .app-store-icon {
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
 }
 
 .btn-text {
@@ -161,12 +165,12 @@ body {
 }
 
 .btn-text-small {
-    font-size: 10px;
+    font-size: 9px;
     opacity: 0.7;
 }
 
 .btn-text-large {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
 }
 
@@ -182,9 +186,10 @@ body {
    Footer
    ======================================== */
 .footer {
-    padding: 16px 0;
+    padding: 12px 0 8px;
     border-top: 1px solid var(--color-divider);
     width: 100%;
+    flex-shrink: 0;
 }
 
 .footer-content {
@@ -192,15 +197,15 @@ body {
 }
 
 .footer-text {
-    font-size: 12px;
+    font-size: 11px;
     color: var(--color-text-secondary);
-    margin-bottom: 4px;
+    margin-bottom: 2px;
 }
 
 .footer-copyright {
     font-size: 10px;
     color: var(--color-text-muted);
-    margin-top: 4px;
+    margin-top: 2px;
 }
 
 .footer-copyright a {
@@ -239,11 +244,15 @@ body {
    Responsive
    ======================================== */
 @media (max-width: 640px) {
-    .hero { padding: 60px 20px; }
+    .hero { padding: 24px 20px 12px; }
 
     .hero-download-btn {
         width: 100%;
         justify-content: center;
-        max-width: 280px;
+        max-width: 260px;
+    }
+
+    .hero-features li {
+        font-size: 11px;
     }
 }
