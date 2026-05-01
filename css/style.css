@@ -72,14 +72,20 @@ body {
     90% { transform: translate(-5%,0); }
 }
 
+.page-wrapper {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
 /* ========================================
    Hero
    ======================================== */
 .hero {
-    min-height: 100dvh;
+    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     padding: 32px 24px 16px;
     position: relative;
@@ -89,10 +95,11 @@ body {
 .hero-content {
     text-align: center;
     max-width: 520px;
-    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .hero-app-icon {
@@ -126,7 +133,7 @@ body {
 .hero-features {
     list-style: none;
     text-align: left;
-    margin-bottom: 20px;
+    margin-bottom: 32px;
     opacity: 0;
     animation: fadeUp 1s ease forwards 0.6s;
 }
@@ -195,7 +202,7 @@ body {
    Footer
    ======================================== */
 .footer {
-    padding: 12px 0 8px;
+    padding: 16px 0 8px;
     border-top: 1px solid var(--color-divider);
     width: 100%;
     flex-shrink: 0;
@@ -253,7 +260,7 @@ body {
    Responsive
    ======================================== */
 @media (max-width: 640px) {
-    .hero { padding: 24px 20px 12px; }
+    .hero { padding: 28px 20px 12px; }
 
     .hero-download-btn {
         width: 100%;
@@ -263,5 +270,9 @@ body {
 
     .hero-features li {
         font-size: 11px;
+    }
+
+    .footer {
+        padding: 12px 0 8px;
     }
 }
