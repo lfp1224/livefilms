@@ -76,8 +76,10 @@
         };
 
         function applyLanguage() {
+            const params = new URLSearchParams(window.location.search);
+            const urlLang = params.get('lang');
             const userLang = navigator.language || navigator.userLanguage;
-            const lang = userLang.startsWith('zh') ? 'zh-CN' : 'en';
+            const lang = urlLang === 'en' || urlLang === 'zh' ? (urlLang === 'zh' ? 'zh-CN' : 'en') : (userLang.startsWith('zh') ? 'zh-CN' : 'en');
             document.documentElement.lang = lang === 'zh-CN' ? 'zh' : 'en';
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
